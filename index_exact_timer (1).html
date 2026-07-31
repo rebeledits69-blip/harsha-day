@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Happy Girlfriends Day ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+--pink:#ff4f8a;
+--pink2:#ff76a9;
+--light:#fff8fc;
+--glass:rgba(255,255,255,.35);
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Poppins,sans-serif;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+background:
+linear-gradient(180deg,#ffe8f3,#fff8fc);
+
+color:#444;
+
+}
+
+/* BACKGROUND */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at 15% 20%,rgba(255,79,138,.18),transparent 30%),
+
+radial-gradient(circle at 90% 15%,rgba(255,190,220,.28),transparent 25%),
+
+radial-gradient(circle at 70% 85%,rgba(255,79,138,.15),transparent 35%);
+
+z-index:-2;
+
+}
+
+.glass{
+
+background:rgba(255,255,255,.4);
+
+backdrop-filter:blur(22px);
+
+border:1px solid rgba(255,255,255,.55);
+
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+border-radius:30px;
+
+}
+
+/* LOADER */
+
+#loading{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+background:linear-gradient(135deg,#ffd8ea,#fff8fc);
+
+z-index:99999;
+
+transition:1s;
+
+}
+
+.loaderHeart{
+
+font-size:90px;
+
+animation:beat 1s infinite;
+
+}
+
+.loadingText{
+
+margin-top:30px;
+
+font-size:22px;
+
+font-weight:600;
+
+}
+
+@keyframes beat{
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* PASSWORD */
+
+#passwordScreen{
+
+display:none;
+
+height:100vh;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+}
+
+.loginCard{
+
+width:min(420px,95%);
+
+padding:50px;
+
+text-align:center;
+
+}
+
+.loginCard h1{
+
+font-family:"Great Vibes";
+
+font-size:70px;
+
+color:var(--pink);
+
+}
+
+.loginCard p{
+
+margin:20px 0 30px;
+
+line-height:1.8;
+
+}
+
+input{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+outline:none;
+
+border-radius:16px;
+
+background:#ffe7f2;
+
+font-size:18px;
+
+}
+
+button{
+
+padding:17px 40px;
+
+margin-top:25px;
+
+border:none;
+
+border-radius:999px;
+
+background:linear-gradient(135deg,var(--pink),var(--pink2));
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 15px 30px rgba(255,79,138,.30);
+
+}
+
+button:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+}
+
+/* HERO */
+
+#hero{
+
+display:none;
+
+min-height:100vh;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+}
+
+.heroCard{
+
+width:min(950px,96%);
+
+padding:70px;
+
+text-align:center;
+
+}
+
+.heroCard h1{
+
+font-family:"Great Vibes";
+
+font-size:95px;
+
+color:var(--pink);
+
+}
+
+.heroCard h2{
+
+font-size:34px;
+
+margin:20px 0;
+
+}
+
+.heroCard p{
+
+font-size:20px;
+
+line-height:2;
+
+max-width:700px;
+
+margin:35px auto;
+
+}
+
+.startBtn{
+
+display:inline-block;
+
+padding:18px 45px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+background:linear-gradient(135deg,var(--pink),var(--pink2));
+
+color:white;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+.startBtn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 20px 40px rgba(255,79,138,.35);
+
+}
+
+/* HEARTS */
+
+.heart{
+
+position:fixed;
+
+bottom:-50px;
+
+pointer-events:none;
+
+animation:float 8s linear forwards;
+
+}
+
+@keyframes float{
+
+to{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+section{
+
+padding:120px 20px;
+
+}
+
+
+.reveal{opacity:0;transform:translateY(40px);transition:.8s ease}
+.reveal.show{opacity:1;transform:none}
+.cursorGlow{position:fixed;width:220px;height:220px;border-radius:50%;
+background:radial-gradient(circle,rgba(255,105,180,.18),transparent 70%);
+pointer-events:none;transform:translate(-50%,-50%);z-index:9999}
+.glass{transition:.4s ease}
+.glass:hover{transform:translateY(-8px);box-shadow:0 35px 70px rgba(255,80,140,.18)}
+
+
+.env3d{width:380px;height:250px;margin:auto;position:relative;cursor:pointer;perspective:1200px}
+.env-back{position:absolute;inset:0;background:linear-gradient(145deg,#ff90bc,#ff5d98);border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.25)}
+.env-bottom{position:absolute;bottom:0;width:100%;height:125px;background:#ff4f8a;clip-path:polygon(0 100%,50% 0,100% 100%);z-index:5}
+.env-left{position:absolute;left:0;width:50%;height:100%;background:#ff6aa2;clip-path:polygon(0 0,100% 50%,0 100%);z-index:6}
+.env-right{position:absolute;right:0;width:50%;height:100%;background:#ff6aa2;clip-path:polygon(100% 0,0 50%,100% 100%);z-index:6}
+.env-top{position:absolute;top:0;width:100%;height:125px;background:#ff9bc4;clip-path:polygon(0 0,50% 100%,100% 0);transform-origin:top;transition:1s;z-index:10}
+.env-letter{position:absolute;left:50%;top:25px;transform:translateX(-50%);width:88%;height:190px;background:#fff;border-radius:14px;padding:28px;text-align:center;box-shadow:0 18px 40px rgba(0,0,0,.15);transition:1s;z-index:2}
+.env-letter h3{font-family:"Great Vibes";font-size:42px;color:#ff4f8a}
+#envelope:hover .env-top{transform:rotateX(180deg)}
+#envelope:hover .env-letter{transform:translate(-50%,-115px)}
+</style>
+
+
+<style>
+.fall{position:fixed;top:-40px;pointer-events:none;animation:fall linear forwards;z-index:5}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.2}}
+</style>
+</head>
+<body>
+
+<!-- ========= LOADING ========= -->
+
+<div id="loading">
+
+<div class="loaderHeart">❤️</div>
+
+<div class="loadingText">
+
+Preparing something special...
+
+</div>
+
+</div>
+
+<!-- ========= PASSWORD ========= -->
+
+<div id="passwordScreen">
+
+<div class="loginCard glass">
+
+<h1>Hello Pretty ❤️</h1>
+
+<p>
+
+This little website has only one key...
+
+The day that changed my life forever.
+
+</p>
+
+<input
+id="pass"
+type="password"
+placeholder="Enter Password">
+
+<br>
+
+<button onclick="login()">
+
+Unlock My Heart ❤️
+
+</button>
+
+<p id="error" style="margin-top:18px;color:#ff3c82;font-weight:600;"></p>
+
+</div>
+
+</div>
+
+<!-- ========= HERO ========= -->
+
+<section id="hero">
+
+<div class="heroCard glass">
+
+<h1>Happy Girlfriends Day ❤️</h1>
+
+<h2>To The Most Beautiful Girl</h2>
+
+<p>
+
+Every smile of yours makes my day brighter.
+
+Every laugh becomes my favorite song.
+
+Every memory with you is something I treasure.
+
+This little website is only a tiny part of how much I truly love you.
+
+</p>
+
+<a class="startBtn" href="#letterSection">
+
+Open My Heart 💌
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ========= LETTER ========= -->
+
+<section id="letterSection">
+
+<div class="glass"
+
+style="
+
+max-width:900px;
+
+margin:auto;
+
+padding:60px;
+
+text-align:center;
+
+">
+
+<h1
+
+style="
+
+font-family:'Great Vibes';
+
+font-size:70px;
+
+color:#ff4f8a;
+
+">
+
+A Letter For You 💌
+
+</h1>
+
+<p
+
+style="
+
+margin:20px auto 45px;
+
+font-size:20px;
+
+max-width:650px;
+
+line-height:2;
+
+">
+
+I wrote every word with love.
+
+Click the envelope below.
+
+</p>
+
+<div id="envelope" onclick="openLetter()" class="env3d"><div class="env-back"></div><div class="env-letter"><h3>For My Love ❤️</h3><p>Click to read my heart...</p></div><div class="env-left"></div><div class="env-right"></div><div class="env-bottom"></div><div id="flap" class="env-top"></div></div></div></section>
+
+<!-- ========= LETTER POPUP ========= -->
+
+<div
+
+id="letterPopup"
+
+style="
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.75);
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+z-index:999999;
+
+">
+
+<div
+
+class="glass"
+
+style="
+
+background:white;
+
+width:min(900px,95%);
+
+padding:50px;
+
+max-height:90vh;
+
+overflow:auto;
+
+position:relative;
+
+">
+
+<button
+
+onclick="closeLetter()"
+
+style="
+
+position:absolute;
+
+right:20px;
+
+top:20px;
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+">
+
+✕
+
+</button>
+
+<h1
+
+style="
+
+font-family:'Great Vibes';
+
+font-size:70px;
+
+text-align:center;
+
+color:#ff4f8a;
+
+margin-bottom:35px;
+
+">
+
+Happy Girlfriends Day ❤️
+
+</h1>
+
+<div
+
+id="letterText"
+
+style="
+
+white-space:pre-line;
+
+font-size:20px;
+
+line-height:2;
+
+">
+
+</div>
+
+</div>
+
+</div>
+<!-- ================= LOVE TIMER ================= -->
+
+<section id="loveTimer">
+
+<div class="glass" style="max-width:1100px;margin:auto;padding:60px;text-align:center;">
+
+<h1 style="font-family:'Great Vibes';font-size:70px;color:#ff4f8a;">
+Our Journey ❤️
+</h1>
+
+<p style="margin:20px auto 50px;font-size:20px;max-width:700px;">
+Every second with you becomes another beautiful memory I'll always treasure.
+</p>
+
+<div class="timerGrid">
+
+<div class="timeCard">
+<h2 id="years">0</h2>
+<span>Years</span>
+</div>
+
+<div class="timeCard">
+<h2 id="months">0</h2>
+<span>Months</span>
+</div>
+
+<div class="timeCard">
+<h2 id="days">0</h2>
+<span>Days</span>
+</div>
+
+<div class="timeCard">
+<h2 id="hours">0</h2>
+<span>Hours</span>
+</div>
+
+<div class="timeCard">
+<h2 id="minutes">0</h2>
+<span>Minutes</span>
+</div>
+
+<div class="timeCard">
+<h2 id="seconds">0</h2>
+<span>Seconds</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.timerGrid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:25px;
+
+}
+
+.timeCard{
+
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+transition:.35s;
+
+}
+
+.timeCard:hover{
+
+transform:translateY(-8px);
+
+}
+
+.timeCard h2{
+
+font-size:50px;
+color:#ff4f8a;
+
+}
+
+.timeCard span{
+
+font-size:18px;
+
+}
+
+</style>
+
+<!-- ================= STORY ================= -->
+
+<section>
+
+<div class="glass" style="max-width:1000px;margin:auto;padding:60px;">
+
+<h1 style="font-family:'Great Vibes';font-size:70px;color:#ff4f8a;text-align:center;">
+
+Our Story 📖
+
+</h1>
+
+<p style="margin-top:40px;font-size:20px;line-height:2;text-align:center;">
+
+Every love story is beautiful,
+
+but ours will forever be my favorite.
+
+<br><br>
+
+From the very first conversation,
+
+to every laugh,
+
+every little fight,
+
+every late-night chat,
+
+every smile...
+
+you slowly became my home.
+
+<br><br>
+
+You turned ordinary days
+
+into memories I'll cherish forever.
+
+And every day,
+
+I fall in love with you all over again.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= TIMELINE ================= -->
+
+<section>
+
+<div class="glass" style="max-width:900px;margin:auto;padding:60px;">
+
+<h1 style="font-family:'Great Vibes';font-size:70px;color:#ff4f8a;text-align:center;">
+
+Our Timeline ❤️
+
+</h1>
+
+<div class="timeline">
+
+<div class="timelineItem">
+<h2>🌸 We Met</h2>
+<p>8-8-2021.</p>
+</div>
+
+<div class="timelineItem">
+<h2>💬 First Long Conversation</h2>
+<p>Staircase In School.</p>
+</div>
+
+<div class="timelineItem">
+<h2>❤️ First "I Love You"</h2>
+<p>The day I'll never forget (04-09-2024).</p>
+</div>
+
+<div class="timelineItem">
+<h2>🥰 Favorite Memory</h2>
+<p>Everytime I spent with her</p>
+</div>
+
+<div class="timelineItem">
+<h2>💍 Forever...</h2>
+<p>This story has only just begun ❤️</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.timeline{
+
+margin-top:50px;
+
+}
+
+.timelineItem{
+
+background:white;
+padding:30px;
+border-left:6px solid #ff4f8a;
+margin:25px 0;
+border-radius:20px;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+transition:.35s;
+
+}
+
+.timelineItem:hover{
+
+transform:translateX(10px);
+
+}
+
+.timelineItem h2{
+
+color:#ff4f8a;
+margin-bottom:10px;
+
+}
+
+</style>
+<script>
+
+const startDate = new Date(2021,8,4,0,0,0);
+
+function updateTimer() {
+ const now=new Date();
+ let years=now.getFullYear()-startDate.getFullYear();
+ let months=now.getMonth()-startDate.getMonth();
+ let days=now.getDate()-startDate.getDate();
+ if(days<0){
+   months--;
+   days+=new Date(now.getFullYear(),now.getMonth(),0).getDate();
+ }
+ if(months<0){
+   years--;
+   months+=12;
+ }
+ const diff=now-startDate;
+ const hours=Math.floor(diff/(1000*60*60))%24;
+ const minutes=Math.floor(diff/(1000*60))%60;
+ const seconds=Math.floor(diff/1000)%60;
+ document.getElementById('years').textContent=years;
+ document.getElementById('months').textContent=months;
+ document.getElementById('days').textContent=days;
+ document.getElementById('hours').textContent=hours;
+ document.getElementById('minutes').textContent=minutes;
+ document.getElementById('seconds').textContent=seconds;
+}
+updateTimer();
+setInterval(updateTimer,1000);
+
+const fullLetter=`Happy Girlfriends Day ❤️
+
+My love,
+
+Every word here comes straight from my heart...
+
+(Keep your full love letter here exactly as you wrote it.)
+
+Forever Yours,
+
+Gagan ❤️`;
+
+let i=0;
+let typing;
+
+function openLetter(){
+
+letterPopup.style.display="flex";
+
+flap.style.transform="rotateX(180deg)";
+
+letterText.innerHTML="";
+
+i=0;
+
+clearInterval(typing);
+
+typing=setInterval(()=>{
+
+letterText.innerHTML+=fullLetter.charAt(i);
+
+i++;
+
+if(i>=fullLetter.length){
+
+clearInterval(typing);
+
+}
+
+},18);
+
+}
+
+function closeLetter(){
+
+letterPopup.style.display="none";
+
+flap.style.transform="rotateX(0deg)";
+
+clearInterval(typing);
+
+}
+
+
+// Premium effects
+const glow=document.createElement('div');
+glow.className='cursorGlow';
+document.body.appendChild(glow);
+document.addEventListener('mousemove',e=>{
+glow.style.left=e.clientX+'px';
+glow.style.top=e.clientY+'px';
+});
+const observer=new IntersectionObserver(es=>{
+es.forEach(en=>{if(en.isIntersecting)en.target.classList.add('show');});
+});
+document.querySelectorAll('section').forEach(s=>{s.classList.add('reveal');observer.observe(s);});
+
+
+setInterval(()=>{
+ const e=document.createElement('div');
+ e.className='fall';
+ e.textContent=Math.random()>.5?'🌸':'💖';
+ e.style.left=Math.random()*100+'vw';
+ e.style.fontSize=(18+Math.random()*18)+'px';
+ e.style.animationDuration=(6+Math.random()*6)+'s';
+ document.body.appendChild(e);
+ setTimeout(()=>e.remove(),12000);
+},500);
+
+</script>
+<!-- ================= LOVE JAR ================= -->
+
+<section id="loveJar">
+
+<div class="glass sectionCard">
+
+<h1>🫙 100 Love Notes</h1>
+
+<p>
+Click the jar and a random love note will appear.
+</p>
+
+<div id="jar">🫙</div>
+
+<div id="noteCard">
+
+<h2>💌 Love Note</h2>
+
+<p id="noteText"></p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROMISES ================= -->
+
+<section id="promises">
+
+<div class="glass sectionCard">
+
+<h1>💍 My Promises</h1>
+
+<p id="promiseText"></p>
+
+<button onclick="nextPromise()">
+Next Promise ❤️
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= REASONS ================= -->
+
+<section id="reasons">
+
+<div class="glass sectionCard">
+
+<h1>❤️ Reasons I Love You</h1>
+
+<div id="giftGrid"></div>
+
+<div id="giftMessage">
+
+<p id="giftText"></p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+<div class="glass sectionCard">
+
+<h1>📸 Our Memories</h1>
+
+<div class="gallery">
+
+<img src="memory1.jpg">
+
+<img src="memory2.jpg">
+
+<img src="memory3.jpg">
+
+<img src="memory4.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FINAL ================= -->
+
+<section id="ending">
+
+<div class="glass sectionCard">
+
+<h1
+style="font-family:'Great Vibes';font-size:80px;">
+Happy Girlfriends Day ❤️
+</h1>
+
+<p>
+
+If I had another lifetime...
+
+I'd still search for you.
+
+I'd still choose you.
+
+I'd still fall in love with you.
+
+Every.
+
+Single.
+
+Time.
+
+❤️
+
+</p>
+
+<button onclick="finish()">
+
+One Last Surprise 🎆
+
+</button>
+
+</div>
+
+</section>
+
+<style>
+
+.sectionCard{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:60px;
+
+text-align:center;
+
+}
+
+#jar{
+
+font-size:140px;
+
+cursor:pointer;
+
+transition:.4s;
+
+margin:40px;
+
+}
+
+#jar:hover{
+
+transform:rotate(-8deg) scale(1.1);
+
+}
+
+#noteCard{
+
+display:none;
+
+margin-top:40px;
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:300px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05) rotate(-2deg);
+
+}
+
+#giftGrid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+
+gap:20px;
+
+margin-top:40px;
+
+}
+
+.gift{
+
+height:120px;
+
+background:#ff4f8a;
+
+border-radius:20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:55px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.gift:hover{
+
+transform:translateY(-8px);
+
+}
+
+#giftMessage{
+
+display:none;
+
+margin-top:35px;
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+}
+
+</style>
+
+<script>
+
+const notes=[
+"I love your smile ❤️",
+"I love your eyes ❤️",
+"I love your laugh ❤️",
+"I love your kindness ❤️",
+"I love every little thing about you ❤️"
+];
+
+const promises=[
+"I'll always choose you.",
+"I'll always respect you.",
+"I'll always support your dreams.",
+"I'll always make time for you.",
+"I'll love you forever."
+];
+
+const reasons=[
+"Because you're beautiful.",
+"Because you're caring.",
+"Because you understand me.",
+"Because you're my safe place.",
+"Because you're YOU ❤️"
+];
+
+let promiseIndex=0;
+
+jar.onclick=function(){
+
+let random=Math.floor(Math.random()*notes.length);
+
+noteCard.style.display="block";
+
+noteText.innerHTML=notes[random];
+
+}
+
+function nextPromise(){
+
+promiseText.innerHTML=promises[promiseIndex];
+
+promiseIndex++;
+
+if(promiseIndex>=promises.length){
+
+promiseIndex=0;
+
+}
+
+}
+
+nextPromise();
+
+reasons.forEach(reason=>{
+
+let box=document.createElement("div");
+
+box.className="gift";
+
+box.innerHTML="🎁";
+
+box.onclick=function(){
+
+giftMessage.style.display="block";
+
+giftText.innerHTML=reason;
+
+box.innerHTML="💖";
+
+};
+
+giftGrid.appendChild(box);
+
+});
+
+function finish(){
+
+document.body.insertAdjacentHTML("beforeend",
+
+`
+
+<div id="finalOverlay">
+
+<button id="closeFinal" onclick="document.getElementById('finalOverlay').remove()">✕</button>
+<h1>I Love You ❤️</h1>
+<p>
+Thank you for being the best thing that has ever happened to me.<br>
+Happy Girlfriends Day ❤️<br><br>
+Forever Yours,<br>Rebeluuu
+</p>
+</div>
+`);
+
+const style=document.createElement("style");
+
+style.innerHTML=`
+
+#finalOverlay{
+position:fixed;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(15,10,20,.82);backdrop-filter:blur(18px);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+color:white;
+
+z-index:999999;
+
+animation:fade 1.5s;
+
+text-align:center;
+
+padding:40px;
+
+}
+
+#finalOverlay h1{
+
+font-size:90px;
+
+font-family:'Great Vibes';
+
+color:#ff7db1;
+
+}
+
+#finalOverlay p{
+
+font-size:24px;
+
+line-height:2;
+
+max-width:700px;
+
+margin-top:30px;
+
+}
+
+#closeFinal{
+position:absolute;top:25px;right:25px;width:48px;height:48px;border:none;
+border-radius:50%;background:#fff;color:#ff4f8a;font-size:24px;cursor:pointer;
+}
+@keyframes fade{
+
+from{opacity:0;}
+
+to{opacity:1;}
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+}
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        document.getElementById("loading").style.opacity = "0";
+
+        setTimeout(function () {
+
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("passwordScreen").style.display = "flex";
+
+        }, 800);
+
+    }, 2000);
+
+});
+
+function login() {
+
+    const pass = document.getElementById("pass").value.trim();
+
+    if (pass === "170607") {
+
+        document.getElementById("passwordScreen").style.display = "none";
+        document.getElementById("hero").style.display = "flex";
+
+    } else {
+
+        document.getElementById("error").textContent = "Wrong Password ❤️";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
